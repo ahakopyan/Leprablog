@@ -13,5 +13,10 @@ class Comment < ActiveRecord::Base
 end
 
 get '/' do
+	@posts = Post.all 
 	erb :index
+end
+
+get '/new' do
+  erb "Hello World"
 end
